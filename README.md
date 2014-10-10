@@ -22,13 +22,15 @@ The installation procedure will use a RHEL 7 virtual machine as a template. Crea
 Run a minimal RHEL 7 installation. After installing, do the following:
 
 * Generate a SSH keypair on the KVM host, and add it to the virtual machine's /root/.ssh/authorized_keys file:
-----
+
+```
 ssh-copy-id root@virtual-machine-ip
-----
+```
+
 * Log on to the virtual machine, and remove the HWADDR option from /etc/sysconfig/network-scripts/ifcfg-eth0
 * Power off the virtual machine
 
-== Installation procedure
+## Installation procedure
 
 The installation procedure is automated by a shell script (reference to script here). First, you will need to edit the following variables to fit your environment:
 
@@ -41,11 +43,11 @@ It is also possible to change the default options for PackStack, if you want to 
 
 When finished, run the script as follows:
 
-----
+```
 ./testpackstack_rhel7_4systems.sh <RHSM user> <RHSM password>
-----
+```
 
-+<RHSM user>+ and +<RHSM password>+ are a username and password used to register the hosts using +subscription-manager+.
+*<RHSM user>* and *<RHSM password>* are a username and password used to register the hosts using *subscription-manager*.
 
 The script will do the following:
 
