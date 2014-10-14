@@ -183,7 +183,7 @@ run_packstack()
  sed --in-place "s/CONFIG_COMPUTE_HOSTS=${controllerIP}/CONFIG_COMPUTE_HOSTS=${compute1IP},${compute2IP}/" /root/aio-4node.txt
  sed --in-place "s/CONFIG_NETWORK_HOSTS=${controllerIP}/CONFIG_NETWORK_HOSTS=${networkIP}/" /root/aio-4node.txt
  sed --in-place "s/CONFIG_PROVISION_TEMPEST=n/CONFIG_PROVISION_TEMPEST=y/" /root/aio-4node.txt
- packstack ${PACKSTACK_DEFAULT_OPTIONS}--answer-file=/root/aio-4node.txt
+ packstack ${PACKSTACK_DEFAULT_OPTIONS} --answer-file=/root/aio-4node.txt
 EOF
 }
 
